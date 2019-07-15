@@ -2,6 +2,7 @@ package yip.guesswhoihate;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -27,10 +28,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        Toast.makeText(getApplicationContext(),"resumed",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Add onclick-listeners",Toast.LENGTH_LONG).show();
+
+        img_peter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        img_laxfax.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        img_furb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        img_peter.setOnClickListener(null);
+        img_laxfax.setOnClickListener(null);
+        img_furb.setOnClickListener(null);
 
     }
 }
