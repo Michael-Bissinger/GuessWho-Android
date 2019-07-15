@@ -5,4 +5,5 @@
     <string name="option_lax">LaxFax</string>
     <string name="option_pete">Peter Lustig</string>
     <string name="question">Wen hasse ich?</string>
+    <string name="score_text">Allzeit-Punkte:</string>
 </resources>
