@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">GuessWhoIHate</string>
+    <string name="option_furb">Furbys wife</string>
+    <string name="option_pete">Peter Lustig</string>
+    <string name="option_lax">LaxFax</string>
 </resources>
