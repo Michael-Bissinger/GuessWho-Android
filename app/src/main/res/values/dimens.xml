@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TopDownPadding">100dp</dimen>
+    <dimen name="textsize_headers">30sp</dimen>
+
+</resources>
