@@ -6,13 +6,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     public ImageView img_peter;
     public ImageView img_laxfax;
     public ImageView img_furb;
 
-    public String choice;
+    public String userchoice;
+    public String machinechoice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +71,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void startGame (String character_chosen) {
 
-        choice = character_chosen;
-        Toast.makeText(this, choice, Toast.LENGTH_SHORT).show();
+        userchoice = character_chosen;
+        Toast.makeText(this, userchoice, Toast.LENGTH_SHORT).show();
+
+        Random randomGenerator = new Random();
+        int numberofChoice = randomGenerator.nextInt(3);
+
+        switch (numberofChoice) {
+            case 0:
+                machinechoice = "I choose Peter Lustig";
+                break;
+            case 1:
+                machinechoice = "I choose LaxFax";
+                break;
+            case 2:
+                machinechoice = "I choose Furb";
+                break;
+        }
+
+        Toast.makeText(this,machinechoice,Toast.LENGTH_LONG).show();
 
     }
 
