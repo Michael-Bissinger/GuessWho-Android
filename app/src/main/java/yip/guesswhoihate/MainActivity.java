@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        Toast.makeText(this,"You choose: " + userchoice + "I hate: " + machinechoice,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"You choose: " + userchoice + ". I hate: " + machinechoice,Toast.LENGTH_SHORT).show();
 
         if (userchoice == machinechoice) {
 
