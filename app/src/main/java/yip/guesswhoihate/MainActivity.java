@@ -1,5 +1,6 @@
 package yip.guesswhoihate;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -107,8 +108,36 @@ public class MainActivity extends AppCompatActivity {
 
         if (win == true) {
             Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
+            setBackgroundColor("holo_green_light");
+
         } else {
             Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
+            setBackgroundColor("holo_red_light");
+        }
+
+    }
+
+    private void setBackgroundColor (String answercolor) {
+
+        String color = answercolor;
+
+        //setContentView(R.layout.activity_main);
+
+        // Now get a handle to any View contained
+        // within the main layout you are using
+        View someView = findViewById(R.id.activ_layout);
+
+        // Find the root view
+        View root = someView.getRootView();
+
+        // Set the color
+        switch (color) {
+            case "holo_green_light":
+                root.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
+                break;
+            case "holo_red_light" :
+                root.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
+                break;
         }
 
     }
