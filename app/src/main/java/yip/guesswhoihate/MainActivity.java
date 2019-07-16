@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     private void startGame (String character_chosen) {
 
         userchoice = character_chosen;
-        Toast.makeText(this, userchoice, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "You choose: " +userchoice, Toast.LENGTH_SHORT).show();
 
         Random randomGenerator = new Random();
         int numberofChoice = randomGenerator.nextInt(3);
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        Toast.makeText(this,machinechoice,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Machine choose: " + machinechoice,Toast.LENGTH_LONG).show();
 
         if (userchoice == machinechoice) {
 
