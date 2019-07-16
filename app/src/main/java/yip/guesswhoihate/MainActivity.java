@@ -63,4 +63,11 @@ public class MainActivity extends AppCompatActivity {
         img_furb.setOnClickListener(null);
 
     }
+
+    private void startGame {
+
+
+
+    }
+
 }
