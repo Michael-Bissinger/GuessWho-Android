@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     private void startGame (String character_chosen) {
 
         userchoice = character_chosen;
-        Toast.makeText(this, "You choose: " +userchoice, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "You choose: " +userchoice, Toast.LENGTH_SHORT).show();
 
         Random randomGenerator = new Random();
         int numberofChoice = randomGenerator.nextInt(3);
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        Toast.makeText(this,"Machine choose: " + machinechoice,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"You choose: " + userchoice + "I hate: " + machinechoice,Toast.LENGTH_LONG).show();
 
         if (userchoice == machinechoice) {
 
@@ -107,11 +107,11 @@ public class MainActivity extends AppCompatActivity {
     private void gameReaction (boolean win) {
 
         if (win == true) {
-            Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_green_light");
 
         } else {
-            Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_red_light");
         }
 
@@ -123,11 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
         //setContentView(R.layout.activity_main);
 
-        // Now get a handle to any View contained
-        // within the main layout you are using
+        // Find the layout
         View someView = findViewById(R.id.activ_layout);
-
-        // Find the root view
         View root = someView.getRootView();
 
         // Set the color
