@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     public ImageView img_laxfax;
     public ImageView img_furb;
 
+    public String choice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,21 +35,21 @@ public class MainActivity extends AppCompatActivity {
         img_peter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startGame("Peter Lustig");
             }
         });
 
         img_laxfax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startGame("LaxFax");
             }
         });
 
         img_furb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startGame("Furb");
             }
         });
 
@@ -64,9 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void startGame {
+    private void startGame (String character_chosen) {
 
-
+        choice = character_chosen;
+        Toast.makeText(this, choice, Toast.LENGTH_SHORT).show();
 
     }
 
