@@ -79,17 +79,37 @@ public class MainActivity extends AppCompatActivity {
 
         switch (numberofChoice) {
             case 0:
-                machinechoice = "I choose Peter Lustig";
+                machinechoice = "Peter Lustig";
                 break;
             case 1:
-                machinechoice = "I choose LaxFax";
+                machinechoice = "LaxFax";
                 break;
             case 2:
-                machinechoice = "I choose Furb";
+                machinechoice = "Furb";
                 break;
         }
 
         Toast.makeText(this,machinechoice,Toast.LENGTH_LONG).show();
+
+        if (userchoice == machinechoice) {
+
+            gameReaction(true);
+
+        }   else {
+
+            gameReaction(false);
+
+        }
+
+    }
+
+    private void gameReaction (boolean win) {
+
+        if (win == true) {
+            Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
