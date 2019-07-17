@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     public String userchoice;
     public String machinechoice;
+    public String scoremessage;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,9 +157,14 @@ public class MainActivity extends AppCompatActivity {
     private void showScore() {
 
         // create a String which adds the Score in it
+
+        scoremessage = "Win: " + "0" + " Fail: " + "0";
+
         // display the String in a Snackbar
 
-        Toast.makeText(this,"show score",Toast.LENGTH_SHORT).show();
+
+
+        //Toast.makeText(this,"show score",Toast.LENGTH_SHORT).show();
     }
 
 }
