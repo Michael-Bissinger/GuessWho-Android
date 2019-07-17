@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        Toast.makeText(getApplicationContext(),"Add onclick-listeners",Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),"Add onclick-listeners",Toast.LENGTH_LONG).show();
 
         img_peter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        manageScore();
+        showScore();
+
     }
 
     private void gameReaction (boolean win) {
@@ -137,6 +140,23 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+
+    }
+
+    private void manageScore() {
+        // open the database
+        // write score in it
+
+        Toast.makeText(this,"manage score",Toast.LENGTH_SHORT).show();
+
+    }
+
+    private void showScore() {
+
+        // create a String which adds the Score in it
+        // display the String in a Snackbar
+
+        Toast.makeText(this,"show score",Toast.LENGTH_SHORT).show();
     }
 
 }
