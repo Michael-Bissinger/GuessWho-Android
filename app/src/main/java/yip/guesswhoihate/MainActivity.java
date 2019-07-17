@@ -1,6 +1,7 @@
 package yip.guesswhoihate;
 
 import android.graphics.Color;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -160,9 +161,11 @@ public class MainActivity extends AppCompatActivity {
 
         scoremessage = "Win: " + "0" + " Fail: " + "0";
 
+        final View myview = findViewById(android.R.id.content);
+
         // display the String in a Snackbar
 
-
+        Snackbar.make(v, scoremessage,Snackbar.LENGTH_SHORT)
 
         //Toast.makeText(this,"show score",Toast.LENGTH_SHORT).show();
     }
