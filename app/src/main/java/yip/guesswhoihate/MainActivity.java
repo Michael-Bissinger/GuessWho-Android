@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     public String machinechoice;
     public String scoremessage;
 
+    public int win_score = 0;
+    public int fail_score = 0;
+
 
 
     @Override
@@ -116,10 +119,12 @@ public class MainActivity extends AppCompatActivity {
         if (win == true) {
             //Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_green_light");
+            win_score++;
 
         } else {
             //Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_red_light");
+            fail_score++;
         }
 
     }
@@ -158,16 +163,14 @@ public class MainActivity extends AppCompatActivity {
     private void showScore() {
 
         // create a String which adds the Score in it
-
-        scoremessage = "Win: " + "0" + " Fail: " + "0";
+        scoremessage = "Win: " + win_score + " Fail: " + fail_score;
 
         final View myview = findViewById(android.R.id.content);
 
         // display the String in a Snackbar
-
         Snackbar.make(myview, scoremessage,Snackbar.LENGTH_SHORT).show();
 
-        //Toast.makeText(this,"show score",Toast.LENGTH_SHORT).show();
+
     }
 
 }
