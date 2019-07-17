@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
         // display the String in a Snackbar
 
-        Snackbar.make(v, scoremessage,Snackbar.LENGTH_SHORT)
+        Snackbar.make(myview, scoremessage,Snackbar.LENGTH_SHORT).show();
 
         //Toast.makeText(this,"show score",Toast.LENGTH_SHORT).show();
     }
