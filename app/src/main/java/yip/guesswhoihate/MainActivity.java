@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void manageScore() {
         // open the database
-        // write score in it
+        // write/update score in it
 
         Toast.makeText(this,"manage score",Toast.LENGTH_SHORT).show();
 
