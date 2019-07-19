@@ -10,12 +10,12 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final String _DB_FILE_NAME = "hate_score.db";
     private static final int _DB_VERSION = 1;
-    private static final String _CREATE_TABLE = "CREATE TABLE \"hate_score\" (\n" +
-            "\t\"_id\"\tINTEGER,\n" +
-            "\t\"win\"\tINTEGER,\n" +
-            "\t\"fail\"\tINTEGER,\n" +
-            "\tPRIMARY KEY(\"_id\")\n" +
-            ")";
+ //   private static final String _CREATE_TABLE = "CREATE TABLE \"hate_score\" (\n" +
+ //           "\t\"_id\"\tINTEGER,\n" +
+ //           "\t\"win\"\tINTEGER,\n" +
+ //           "\t\"fail\"\tINTEGER,\n" +
+ //           "\tPRIMARY KEY(\"_id\")\n" +
+ //           ")";
 
 
     public DbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
