@@ -26,7 +26,8 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         //Toast.makeText(this, "Db created!", Toast.LENGTH_LONG).show();
-        db.execSQL(_CREATE_TABLE);
+        //db.execSQL(_CREATE_TABLE);
+        HateScoreTable.createTable(db);
 
     }
 
