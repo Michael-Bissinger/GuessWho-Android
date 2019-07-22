@@ -102,14 +102,16 @@ public class MainActivity extends AppCompatActivity {
         if (userchoice == machinechoice) {
 
             gameReaction(true);
+            manageScore(true);
 
         }   else {
 
             gameReaction(false);
+            manageScore(false);
 
         }
 
-        manageScore();
+
         showScore();
 
     }
@@ -119,12 +121,12 @@ public class MainActivity extends AppCompatActivity {
         if (win == true) {
             //Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_green_light");
-            win_score++;
+            //win_score++;
 
         } else {
             //Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_red_light");
-            fail_score++;
+            //fail_score++;
         }
 
     }
@@ -152,10 +154,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void manageScore() {
+    private void manageScore(boolean win) {
         // open the database
         // write/update score in it
 
+
+
+        if (win == true) {
+            ScoreHelper.addWinScore(getApplicationContext());
+        } else {
+            ScoreHelper.addFailScore(getApplicationContext());
+        }
 
 
         Toast.makeText(this,"manage score",Toast.LENGTH_SHORT).show();
