@@ -156,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
         // open the database
         // write/update score in it
 
+        int current_win_score;
+        int current_fail_score;
+
+        getSharedPreferences()
+
+
         Toast.makeText(this,"manage score",Toast.LENGTH_SHORT).show();
 
     }
