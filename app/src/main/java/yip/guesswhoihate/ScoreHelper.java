@@ -25,4 +25,21 @@ public class ScoreHelper {
 
     }
 
+
+    public static void addWinScore(Context context) {
+        int current_score = getPreferences(context).getInt(PREF_WIN, 0);
+
+        SharedPreferences.Editor editor = getPreferences(context).edit();
+        editor.putInt(PREF_WIN, current_score++);
+        editor.apply();
+    }
+
+    public static void addFailScore(Context context) {
+        int current_score = getPreferences(context).getInt(PREF_FAIL, 0);
+
+        SharedPreferences.Editor editor = getPreferences(context).edit();
+        editor.putInt(PREF_FAIL, current_score++);
+        editor.apply();
+    }
+
 }
