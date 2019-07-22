@@ -173,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void showScore() {
 
+        int current_win_score = ScoreHelper.getWinScore(getApplicationContext());
+        int current_fail_score = ScoreHelper.getFailScore(getApplicationContext());
+
         // create a String which adds the Score in it
         scoremessage = "Win: " + win_score + " Fail: " + fail_score;
 
