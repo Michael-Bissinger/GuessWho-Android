@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         int current_fail_score = ScoreHelper.getFailScore(getApplicationContext());
 
         // create a String which adds the Score in it
-        scoremessage = "Win: " + win_score + " Fail: " + fail_score;
+        scoremessage = "Win: " + current_win_score + " Fail: " + current_fail_score;
 
         final View myview = findViewById(android.R.id.content);
 
