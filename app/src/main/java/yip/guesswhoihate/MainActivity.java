@@ -121,12 +121,12 @@ public class MainActivity extends AppCompatActivity {
         if (win == true) {
             //Toast.makeText(this, "Richtig!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_green_light");
-            //win_score++;
+            win_score++;
 
         } else {
             //Toast.makeText(this, "Falsch!", Toast.LENGTH_SHORT).show();
             setBackgroundColor("holo_red_light");
-            //fail_score++;
+            fail_score++;
         }
 
     }
@@ -177,7 +177,8 @@ public class MainActivity extends AppCompatActivity {
         int current_fail_score = ScoreHelper.getFailScore(getApplicationContext());
 
         // create a String which adds the Score in it
-        scoremessage = "Win: " + current_win_score + " Fail: " + current_fail_score;
+        //scoremessage = "Win: " + current_win_score + " Fail: " + current_fail_score;
+        scoremessage = "Win: " + win_score + " Fail: " + fail_score;
 
         final View myview = findViewById(android.R.id.content);
 
