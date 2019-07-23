@@ -166,9 +166,6 @@ public class MainActivity extends AppCompatActivity {
             ScoreHelper.addFailScore(getApplicationContext());
         }
 
-
-        Toast.makeText(this,"manage score",Toast.LENGTH_SHORT).show();
-
     }
 
     private void showScore() {
